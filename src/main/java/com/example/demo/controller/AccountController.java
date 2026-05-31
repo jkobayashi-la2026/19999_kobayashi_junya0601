@@ -39,8 +39,8 @@ public class AccountController {
 
 		Collections.shuffle(itemList);
 		//		//		Collections.shuffle(itemList);
-		//		
-		itemList = itemList.subList(0, 3);
+		//		2でコミット
+		itemList = itemList.subList(0, 2);
 
 		model.addAttribute("items", itemList);
 
