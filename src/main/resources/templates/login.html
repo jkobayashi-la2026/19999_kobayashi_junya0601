@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ログイン</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<header>
+		<h1>サンプルショッピング</h1>
+	</header>
+	<main>
+		<form action="/login" method="post">
+			<input type="text" name="name" placeholder="名前">
+			<button>ログイン</button>
+			<br> <span th:text="${message}" style="color: red"></span>
+		</form>
+		
+		
+		<h2>ピックアップ商品</h2>
+		<table border="1">
+			<tr>
+				<td th:each="i : ${items}" >
+						
+					<div th:text="${i.id}"></div>
+					<div th:text="${i.name}"></div>
+					<img th:src="'/img/' + ${i.id} + '.png'">
+	
+				</td>
+			</tr>
+			
+		</table>
+	</main>
+</body>
+</html>
